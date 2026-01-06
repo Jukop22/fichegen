@@ -5,8 +5,21 @@
     <link rel="icon" type="image/png" href="/fichegen/logo.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>FicheGen - Générateur de Fiches pour Films/Séries</title>
-    <script type="module" crossorigin src="/fichegen/assets/index-ClAznHPp.js"></script>
-    <link rel="stylesheet" crossorigin href="/fichegen/assets/index-b86qLGp9.css">
+    <script>
+      // GitHub Pages SPA redirection
+      (function(l) {
+        if (l.search[1] === '/' ) {
+          var decoded = l.search.slice(1).split('&').map(function(s) { 
+            return s.replace(/~and~/g, '&')
+          }).join('?');
+          window.history.replaceState(null, null,
+              l.pathname.slice(0, -1) + decoded + l.hash
+          );
+        }
+      }(window.location))
+    </script>
+    <script type="module" crossorigin src="/fichegen/assets/index-C5Ypr6jo.js"></script>
+    <link rel="stylesheet" crossorigin href="/fichegen/assets/index-Z3Eb6cHG.css">
   </head>
   <body>
     <div id="root"></div>
