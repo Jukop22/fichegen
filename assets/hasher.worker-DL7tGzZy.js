@@ -1,1 +1,0 @@
-const e=self;e.onmessage=async s=>{const t=s.data;if("HASH"===t.type)try{const s=await crypto.subtle.digest("SHA-1",t.data);e.postMessage({type:"HASH_RESULT",pieceIndex:t.pieceIndex,hash:s},[s])}catch(a){e.postMessage({type:"HASH_ERROR",pieceIndex:t.pieceIndex,message:a instanceof Error?a.message:String(a)})}};
